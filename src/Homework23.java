@@ -1,16 +1,18 @@
 public class Homework23 {
     public static void main(String[] args) {
-        Smartphones android = new Androids();
-        Smartphones iPhone = new iPhones();
+        OS android = new OS("Android");
+        OS iPhone = new OS("iPhone");
 
+        android.loadOs();
         android.call();
         android.sms();
         android.internet();
-        ((LinuxOS) android).customizeLinux();
-
+        android.customizeLinux();
+        System.out.println();
+        iPhone.loadOs();
         iPhone.call();
         iPhone.sms();
         iPhone.internet();
-        ((IOS) iPhone).iOS();
+        iPhone.iOS();
     }
 }
